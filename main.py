@@ -12,7 +12,8 @@ password = os.getenv('password')
 driver = webdriver.Chrome()
 
 driver.get('https://www.instagram.com/accounts/login/')
-driver.implicitly_wait(5)
+
+time.sleep(5)
 
 username_element = driver.find_element(By.CSS_SELECTOR, 'input[name="username"]')
 password_element = driver.find_element(By.CSS_SELECTOR, 'input[name="password"]')
